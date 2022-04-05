@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+
+body{
+    background: linear-gradient(to right, rgb(246, 255, 164),rgb(182, 255, 206),rgb(253, 215, 170));
+    font-family: 'Roboto Slab', serif;
+}
+
+.clock{
+    height: 25vw;
+    width: 25vw;
+    background-color: rgb(255,255,255, 0.4);
+    border-radius: 50%;
+    position: relative;
+    font-size: 1.2vw;
+    box-shadow: 2px 1.5px 3px 2px rgb(182, 255, 206);
+    margin: auto;
+    margin-top: 70px;
+}
+
+.clock .number {
+--rotation : 0;
+position:absolute;
+height: 100%;
+width: 100%;
+text-align: center;
+transform: rotate(var(--rotation));
+padding: 5px;
+}
+
+.clock .number1 { --rotation : 30deg }
+.clock .number2 { --rotation : 60deg }
+.clock .number3 { --rotation : 90deg }
+.clock .number4 { --rotation : 120deg }
+.clock .number5 { --rotation : 150deg }
+.clock .number6 { --rotation : 180deg }
+.clock .number7 { --rotation : 210deg }
+.clock .number8 { --rotation : 240deg }
+.clock .number9 { --rotation : 270deg }
+.clock .number10 { --rotation : 300deg }
+.clock .number11 { --rotation : 330deg }
+.clock .number12 { --rotation : 360deg }
+
+.middle{
+    height: 1vw;
+    width: 1vw;
+    background-color: black;
+    border-radius: 50%;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+}
+
+.hrline{
+    position: absolute;
+    left: 49.3%;
+    top: 20%;
+    height: 7.5vw;
+    width: 0.4vw;
+    background-color: black;
+    transform-origin: bottom;
+    
+}
+
+.minline{
+    position: absolute;
+    left: 49.5%;
+    top: 18%;
+    height: 8vw;
+    width: 0.3vw;
+    background-color: black;
+    transform-origin: bottom;
+}
+
+.secline{
+    position: absolute;
+    left: 49.7%;
+    top: 14%;
+    height: 9vw;
+    width: 0.2vw;
+    background-color: red;
+    transform-origin: bottom;
+
+}
+
+.footer{
+   position: absolute;
+   bottom: 0px;
+   left: 50%;
+   transform: translate(-50%);
+   font-size: 12px;
+}
+
+.footer a {
+    text-decoration: none;
+    color: black;
+}
+
+@media screen and (max-width: 450px) {
+    .clock{
+        height: 65vw;
+        width: 65vw;
+        background-color: rgb(255,255,255, 0.4);
+        border-radius: 50%;
+        position: relative;
+        font-size: 4vw;
+        box-shadow: 2px 1.5px 3px 2px rgb(182, 255, 206);
+        margin: auto;
+        margin-top: 70px;
+    }
+
+    .middle{
+        height: 4vw;
+        width: 4vw;
+        background-color: black;
+        border-radius: 50%;
+        position:absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .hrline{
+        position: absolute;
+        left: 49%;
+        top: 20%;
+        height: 19.5vw;
+        width: 1.5vw;
+        background-color: black;
+        transform-origin: bottom;
+        /* display: none; */
+    }
+    
+    .minline{
+        position: absolute;
+        left: 49.2%;
+        top: 18%;
+        height: 21vw;
+        width: 1.2vw;
+        background-color: black;
+        transform-origin: bottom;
+        /* display: none; */
+
+    }
+    
+    .secline{
+        position: absolute;
+        left: 49.7%;
+        top: 14%;
+        height: 23.5vw;
+        width: 0.6vw;
+        background-color: red;
+        transform-origin: bottom;
+        /* display: none; */
+    
+    }
+    
+}
